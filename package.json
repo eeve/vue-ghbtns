@@ -1,16 +1,16 @@
 {
   "name": "vue-ghbtns",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "GitHub buttons component for Vue.",
   "main": "dist/index.js",
   "author": "eeve",
   "license": "MIT",
   "scripts": {
     "dev": "webpack-dev-server --config build/webpack.dev.js",
-    "dist": "webpack --config build/webpack.dist.js --display-modules --sort-modules-by size",
-    "eslint": "standard --verbose --fix --plugin html '**/*.{js,vue}'",
-    "test": "mocha --compilers js:babel-core/register",
-    "prepublish": "npm run eslint && npm run dist"
+    "dist:docs": "rimraf docs && cross-env NODE_ENV=production webpack --config build/webpack.dev.js  --display-modules --sort-modules-by size",
+    "dist": "rimraf dist && webpack --config build/webpack.dist.js --display-modules --sort-modules-by size",
+    "eslint": "standard --verbose --fix --plugin html 'src/**/*.{js,vue}'",
+    "prepublish": "npm run eslint && npm run dist && npm run dist:docs"
   },
   "standard": {
     "parser": "babel-eslint"
@@ -38,6 +38,7 @@
     "friendly-errors-webpack-plugin": "^1.6.1",
     "highlightjs": "^9.10.0",
     "html-webpack-plugin": "^2.30.1",
+    "rimraf": "^2.6.2",
     "standard": "^10.0.3",
     "style-loader": "^0.18.2",
     "vue": "^2.4.3",

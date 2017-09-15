@@ -15,7 +15,7 @@ module.exports = merge(conf, {
     vendors: ['vue']
   },
   output: {
-    path: resolve('examples/dist'),
+    path: resolve('docs'),
     publicPath: '',
     filename: '[name].js',
     chunkFilename: '[name].chunk.js'
@@ -28,6 +28,11 @@ module.exports = merge(conf, {
     }
   },
   plugins: [
+    process.env.NODE_ENV === 'production' ? new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: '"production"'
+      }
+    }) : function () {},
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.optimize.CommonsChunkPlugin({ name: 'vendors', filename: 'vendor.bundle.js' }),
@@ -35,7 +40,7 @@ module.exports = merge(conf, {
       inject: true,
       chunks: [ 'vendors', 'app' ],
       template: resolve('examples/index.html'),
-      filename: resolve('examples/dist/index.html')
+      filename: resolve('docs/index.html')
     })
   ],
   devServer: {
