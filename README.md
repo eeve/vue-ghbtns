@@ -17,4 +17,4 @@ GitHub buttons component for Vue.
 
 # Live Demo
 
-[view demo](https://eeve.github.io/vue-ghbtns)
+[view demo](https://eeve.github.io/vue-ghbtns/index.html)
