@@ -1,0 +1,51 @@
+{
+  "name": "vue-ghbtns",
+  "version": "0.0.2",
+  "description": "GitHub buttons component for Vue.",
+  "main": "dist/index.js",
+  "author": "eeve",
+  "license": "MIT",
+  "scripts": {
+    "dev": "webpack-dev-server --config build/webpack.dev.js",
+    "dist": "webpack --config build/webpack.dist.js --display-modules --sort-modules-by size",
+    "eslint": "standard --verbose --fix --plugin html '**/*.{js,vue}'",
+    "test": "mocha --compilers js:babel-core/register",
+    "prepublish": "npm run eslint && npm run dist"
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  },
+  "keywords": [
+    "star",
+    "issue",
+    "button",
+    "github",
+    "github-buttons"
+  ],
+  "devDependencies": {
+    "axios": "^0.16.2",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "clipboard": "^1.7.1",
+    "compression-webpack-plugin": "^1.0.0",
+    "cross-env": "^5.0.5",
+    "css-loader": "^0.28.7",
+    "eslint-plugin-html": "^3.2.1",
+    "friendly-errors-webpack-plugin": "^1.6.1",
+    "highlightjs": "^9.10.0",
+    "html-webpack-plugin": "^2.30.1",
+    "standard": "^10.0.3",
+    "style-loader": "^0.18.2",
+    "vue": "^2.4.3",
+    "vue-loader": "^13.0.4",
+    "vue-style-loader": "^3.0.2",
+    "vue-template-compiler": "^2.4.3",
+    "webpack": "^3.5.6",
+    "webpack-dev-server": "^2.8.1",
+    "webpack-merge": "^4.1.0"
+  }
+}

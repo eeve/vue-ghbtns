@@ -1,0 +1,9 @@
+.idea
+*.iml
+node_modules/
+*.log
+.DS_Store
+dist
+npm-debug.log.*
+docs
+.history
