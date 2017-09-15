@@ -10,6 +10,7 @@
     "dist:docs": "rimraf docs && cross-env NODE_ENV=production webpack --config build/webpack.dev.js  --display-modules --sort-modules-by size",
     "dist": "rimraf dist && webpack --config build/webpack.dist.js --display-modules --sort-modules-by size",
     "eslint": "standard --verbose --fix --plugin html 'src/**/*.{js,vue}'",
+    "test": "npm run eslint",
     "prepublish": "npm run eslint && npm run dist && npm run dist:docs"
   },
   "standard": {
@@ -23,7 +24,6 @@
     "github-buttons"
   ],
   "devDependencies": {
-    "axios": "^0.16.2",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.0",
@@ -48,5 +48,8 @@
     "webpack": "^3.5.6",
     "webpack-dev-server": "^2.8.1",
     "webpack-merge": "^4.1.0"
+  },
+  "dependencies": {
+    "axios": "^0.16.2"    
   }
 }
