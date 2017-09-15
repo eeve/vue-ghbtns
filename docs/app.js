@@ -23060,7 +23060,7 @@ var staticRenderFns = [function () {
   var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;
   return _c('a', {
     attrs: {
-      "href": "https://github.com/eeve"
+      "href": "https://github.com/eeve/vue-ghbtns"
     }
   }, [_c('img', {
     staticStyle: {
