@@ -113,11 +113,11 @@ export default {
     getRegx () {
       switch (this.type) {
         case 'star':
-          return /<a\sclass=".*"\shref=".*"\s+aria-label="\d+\susers\sstarred\sthis\srepository">\s+((\w+?,?\w+?)?(\d)?)\s+<\/a>/g
+          return /<a\sclass=".*"\shref=".*"\s+aria-label="\d+\susers?\sstarred\sthis\srepository">\s+((\w+?,?\w+?)?(\d)?)\s+<\/a>/g
         case 'fork':
-          return /<a\shref=".*"\sclass=".*"\s+aria-label="\d+\susers\sforked\sthis\srepository">\s+((\w+?,?\w+?)?(\d)?)\s+<\/a>/g
+          return /<a\shref=".*"\sclass=".*"\s+aria-label="\d+\susers?\sforked\sthis\srepository">\s+((\w+?,?\w+?)?(\d)?)\s+<\/a>/g
         case 'watch':
-          return /<a\sclass=".*"\shref=".*"\s+aria-label="\d+\susers\sare\swatching\sthis\srepository">\s+((\w+?,?\w+?)?(\d)?)\s+<\/a>/g
+          return /<a\sclass=".*"\shref=".*"\s+aria-label="\d+\susers?\sare\swatching\sthis\srepository">\s+((\w+?,?\w+?)?(\d)?)\s+<\/a>/g
       }
     },
     async loaded () {
