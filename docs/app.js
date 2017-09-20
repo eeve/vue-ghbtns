@@ -6011,7 +6011,7 @@ exports = module.exports = __webpack_require__(6)(undefined);
 
 
 // module
-exports.push([module.i, "\ndiv[data-v-78a8bd72] {\n  position: relative;\n  font-size: 14px;\n}\npre.bg code[data-v-78a8bd72] {\n  background: #efefef;\n}\nspan.copy[data-v-78a8bd72] {\n  border-radius: 0 0 3px 3px;\n  padding: 2px 5px;\n  position: absolute;\n  top: 5px;\n  right: 0;\n  color: #b2b2b2;\n  cursor: pointer;\n}\n.bg+span.copy[data-v-78a8bd72] {\n  right: 5px;\n}\n.copied[data-v-78a8bd72] {\n  color: #5cb85c;\n}\n.copied svg[data-v-78a8bd72] {\n  vertical-align: super;\n}\nspan.copy[data-v-78a8bd72]:hover {\n  color: #5c6b77;\n}\n", ""]);
+exports.push([module.i, "\ndiv[data-v-78a8bd72] {\n  position: relative;\n  font-size: 14px;\n}\npre.bg code[data-v-78a8bd72] {\n  background: #efefef;\n}\nspan.copy[data-v-78a8bd72] {\n  border-radius: 0 0 3px 3px;\n  padding: 2px 5px;\n  position: absolute;\n  top: 5px;\n  right: 0;\n  color: #b2b2b2;\n  cursor: pointer;\n}\n.copy-btn[data-v-78a8bd72] {\n  border: none;\n  background: #dadada;\n  outline: none;\n  cursor: pointer;\n}\n.bg+span.copy[data-v-78a8bd72] {\n  right: 5px;\n}\n.copied[data-v-78a8bd72] {\n  color: #5cb85c;\n}\n.copied svg[data-v-78a8bd72] {\n  vertical-align: sub;\n}\nspan.copy[data-v-78a8bd72]:hover {\n  color: #5c6b77;\n}\n", ""]);
 
 // exports
 
@@ -6094,7 +6094,7 @@ exports.push([module.i, "\ndiv[data-v-78a8bd72] {\n  position: relative;\n  font
         console.log('代码已复制到剪贴板');
         setTimeout(function () {
           _this.copied = false;
-        }, 20000);
+        }, 2000);
       });
     }
   }
@@ -22855,7 +22855,8 @@ var render = function render() {
       rawName: "v-show",
       value: !_vm.copied,
       expression: "!copied"
-    }]
+    }],
+    staticClass: "copy-btn"
   }, [_c('svg', {
     attrs: {
       "aria-hidden": "true",
@@ -22876,7 +22877,7 @@ var render = function render() {
       value: _vm.copied,
       expression: "copied"
     }],
-    staticClass: "copied"
+    staticClass: "copy-btn copied"
   }, [_c('svg', {
     attrs: {
       "aria-hidden": "true",
@@ -22916,7 +22917,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns };
   },
   usageVue: {
     lang: 'html',
-    code: '\n    <!DOCTYPE html>\n    <html lang="en">\n    <head>\n      <meta charset="UTF-8">\n      <meta name="viewport" content="width=device-width, initial-scale=1.0">\n      <meta http-equiv="X-UA-Compatible" content="ie=edge">\n      <title>Github Buttons</title>\n    </head>\n    <body>\n      <div id="app">\n        <GitHubButtons repository="vuejs/vue" @on-updated="updated" type="watch"></GitHubButtons>\n        <GitHubButtons repository="vuejs/vue" @on-updated="updated" type="star" ></GitHubButtons>\n        <GitHubButtons repository="vuejs/vue" @on-updated="updated" type="fork" ></GitHubButtons>\n        <GitHubButtons repository="vuejs/vue" type="follow"></GitHubButtons>\n        <GitHubButtons repository="vuejs/vue" type="issue"></GitHubButtons>\n        <GitHubButtons repository="vuejs/vue" type="download"></GitHubButtons>\n      </div>\n    </body>\n    </html>'
+    code: '\n    <!DOCTYPE html>\n    <html lang="en">\n    <head>\n      <meta charset="UTF-8">\n      <meta name="viewport" content="width=device-width, initial-scale=1.0">\n      <meta http-equiv="X-UA-Compatible" content="ie=edge">\n      <title>Github Buttons</title>\n    </head>\n    <body>\n      <div id="app">\n        <GitHubButtons repository="vuejs/vue" type="watch" @on-updated="updated"></GitHubButtons>\n        <GitHubButtons repository="vuejs/vue" type="star"  @on-updated="updated"></GitHubButtons>\n        <GitHubButtons repository="vuejs/vue" type="fork"  @on-updated="updated"></GitHubButtons>\n        <GitHubButtons repository="vuejs/vue" type="follow"></GitHubButtons>\n        <GitHubButtons repository="vuejs/vue" type="issue"></GitHubButtons>\n        <GitHubButtons repository="vuejs/vue" type="download"></GitHubButtons>\n      </div>\n    </body>\n    </html>'
   }
 });
 
