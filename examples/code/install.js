@@ -40,9 +40,9 @@ export default {
     </head>
     <body>
       <div id="app">
-        <GitHubButtons repository="vuejs/vue" @on-updated="updated" type="watch"></GitHubButtons>
-        <GitHubButtons repository="vuejs/vue" @on-updated="updated" type="star" ></GitHubButtons>
-        <GitHubButtons repository="vuejs/vue" @on-updated="updated" type="fork" ></GitHubButtons>
+        <GitHubButtons repository="vuejs/vue" type="watch" @on-updated="updated"></GitHubButtons>
+        <GitHubButtons repository="vuejs/vue" type="star"  @on-updated="updated"></GitHubButtons>
+        <GitHubButtons repository="vuejs/vue" type="fork"  @on-updated="updated"></GitHubButtons>
         <GitHubButtons repository="vuejs/vue" type="follow"></GitHubButtons>
         <GitHubButtons repository="vuejs/vue" type="issue"></GitHubButtons>
         <GitHubButtons repository="vuejs/vue" type="download"></GitHubButtons>
